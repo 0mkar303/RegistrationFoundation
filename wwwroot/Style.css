@@ -1,0 +1,49 @@
+﻿/* Apply default font and background to entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+}
+
+/* Main card-style container */
+.container {
+    width: 400px; /* Fixed width for form */
+    margin: 40px auto; /* Center the form */
+    background-color: white; /* Card background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Labels appear above inputs */
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Style all inputs, dropdowns and buttons */
+input, select, button {
+    width: 100%; /* Full width */
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* Button styling */
+button {
+    margin-top: 15px;
+    background-color: #0a4d8c; /* Hospital theme color */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    /* Hover effect for buttons */
+    button:hover {
+        background-color: #083a66;
+    }
+
+/* Output section (hidden initially) */
+#output {
+    margin-top: 20px;
+    background-color: #e8f4ff;
+    padding: 10px;
+    display: none; /* Shown only after form submission */
+}
