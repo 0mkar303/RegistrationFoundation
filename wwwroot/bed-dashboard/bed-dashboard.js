@@ -25,6 +25,7 @@ let beds = [
     { bedNumber: 10, isOccupied: false },
     { bedNumber: 11, isOccupied: true },
     { bedNumber: 12, isOccupied: false }
+    /*Activity1.Add Bed 11, 12*/
 ];
 
 
@@ -69,6 +70,7 @@ function renderBeds() {
 
         // Click event to toggle bed status
         bedDiv.onclick = function () {
+            /*Activity44.	Disable clicking on occupied beds*/
             if (!bed.isOccupied) {
                 bed.isOccupied = !bed.isOccupied;
                 // Toggle the bed status
@@ -80,7 +82,7 @@ function renderBeds() {
         // Add bed to container
         container.appendChild(bedDiv);
     }
-
+    /*Activity3.	Count occupied beds and show total*/
     // Display the available and occupied bed counts
     document.getElementById("availableCount").innerText = `Available Beds: ${availableCount}`;
     document.getElementById("occupiedCount").innerText = `Occupied Beds: ${occupiedCount}`;

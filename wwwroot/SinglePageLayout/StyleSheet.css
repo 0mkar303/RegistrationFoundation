@@ -1,15 +1,19 @@
 ﻿/* GENERAL PAGE STYLING */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    background-color: #eef7fb;
+    /* ACTIVITY 4: Change to Hospital Theme Colors*/
+    /* background-color: #f4f6f8;*/
     padding: 20px;
 }
 
 /* MAIN PAGE TITLE */
 .page-title {
     text-align: center;
-    color: #0a4d8c;
+    /* color: #0a4d8c;*/
     margin-bottom: 30px;
+    color: #0056b3;
+   /* ACTIVITY 4: Change to Hospital Theme Colors*/
 }
 
 /* COMMON SECTION STYLE */
@@ -27,7 +31,10 @@ section {
     width: 250px;
     padding: 15px;
     border: 2px solid #0a4d8c;
-    background-color: #e8f4ff;
+    /* background-color: #e8f4ff;*/
+    /* ACTIVITY 4: Change to Hospital Theme Colors*/
+    background-color: #e3f2fd;
+    border-color: #0056b3;
 }
 
     /* Shows margin, padding, border clearly */
@@ -38,18 +45,27 @@ section {
 /* ------------------------------------------------ */
 /* 2. FLEXBOX – ONE DIRECTION LAYOUT */
 /* ------------------------------------------------ */
+/*.flex-container {
+    display: flex;*/ /* Enables flexbox */
+    /*gap: 15px;*/ /* Space between cards */
+    /*justify-content: space-between;
+}*/
+/*ACTIVITY 1: Change Flexbox to Column*/
 .flex-container {
-    display: flex; /* Enables flexbox */
-    gap: 15px; /* Space between cards */
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
 
 .doctor-card {
     flex: 1; /* Equal width cards */
-    background-color: #d1e7dd;
+    /* background-color: #d1e7dd;*/
     padding: 20px;
     text-align: center;
     border-radius: 6px;
+    /* ACTIVITY 4: Change to Hospital Theme Colors*/
+    background-color: #d4edda;
 }
 
 /* ------------------------------------------------ */
@@ -57,23 +73,30 @@ section {
 /* ------------------------------------------------ */
 .grid-container {
     display: grid; /* Enables grid */
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    /*grid-template-columns: repeat(3, 1fr);*/ /* 3 equal columns */
+    grid-template-columns: repeat(4, 1fr); /* ACTIVITY 2: Change to 4 equal columns */
     gap: 10px;
 }
 
 .grid-item {
-    background-color: #fff3cd;
+    /* background-color: #fff3cd;*/
     padding: 10px;
     text-align: center;
     border: 1px solid #ffc107;
+    /* ACTIVITY 4: Change to Hospital Theme Colors*/
+    background-color: #e8f5e9;
+    border-color: #28a745;
 }
 
 /* ------------------------------------------------ */
 /* 4. TYPOGRAPHY – READABILITY */
 /* ------------------------------------------------ */
 .typography .note {
-    font-size: 16px; /* Comfortable reading size */
-    line-height: 1.6; /* Spacing between lines */
+    /*font-size: 16px;*/ /* Comfortable reading size */
+    /*line-height: 1.6;*/ /* Spacing between lines */
+    font-size: 18px;
+    line-height: 1.8;/*ACTIVITY 3: Increase Font Size & Line Height*/
     letter-spacing: 0.5px; /* Improves clarity */
     color: #333;
 }
+

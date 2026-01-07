@@ -19,6 +19,7 @@ h1 {
 .bed-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 5 beds per row */
+    /*Activity 2.Change grid to 4 columns*/
     gap: 15px;
     max-width: 600px;
     margin: auto;
