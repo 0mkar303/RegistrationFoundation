@@ -23,7 +23,7 @@ let beds = [
     { bedNumber: 8, isOccupied: false },
     { bedNumber: 9, isOccupied: true },
     { bedNumber: 10, isOccupied: false },
-    { bedNumber: 11, isOccupied: false },
+    { bedNumber: 11, isOccupied: true },
     { bedNumber: 12, isOccupied: false }
 ];
 
@@ -31,12 +31,19 @@ let beds = [
 // -----------------------------
 // FUNCTION: Render beds on screen
 // -----------------------------
+// -----------------------------
+// FUNCTION: Render beds on screen and display count
+// -----------------------------
 function renderBeds() {
 
     let container = document.getElementById("bedContainer");
 
     // Clear existing beds
     container.innerHTML = "";
+
+    // Variables to track available and occupied bed counts
+    let availableCount = 0;
+    let occupiedCount = 0;
 
     // Loop through all beds
     for (let i = 0; i < beds.length; i++) {
@@ -51,26 +58,33 @@ function renderBeds() {
 
         // Condition to decide color
         if (bed.isOccupied) {
+            occupiedCount++;
             bedDiv.classList.add("occupied");
             bedDiv.innerText = "Bed " + bed.bedNumber + "\nOccupied";
-            count++;
         } else {
+            availableCount++;
             bedDiv.classList.add("available");
             bedDiv.innerText = "Bed " + bed.bedNumber + "\nAvailable";
         }
 
         // Click event to toggle bed status
         bedDiv.onclick = function () {
-            bed.isOccupied =!bed.isOccupied;
-            renderBeds(); // Re-render UI
+            if (!bed.isOccupied) {
+                bed.isOccupied = !bed.isOccupied;
+                // Toggle the bed status
+                
+                renderBeds(); // Re-render UI with updated counts
+            }
         };
 
         // Add bed to container
         container.appendChild(bedDiv);
     }
+
+    // Display the available and occupied bed counts
+    document.getElementById("availableCount").innerText = `Available Beds: ${availableCount}`;
+    document.getElementById("occupiedCount").innerText = `Occupied Beds: ${occupiedCount}`;
 }
-
-
 
 // -----------------------------
 // INITIAL LOAD
